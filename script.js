@@ -1,4 +1,4 @@
-const bills = [140, 45, 270];
+/* const bills = [140, 45, 270];
 
 
 function calculateTip(bill){
@@ -28,4 +28,32 @@ const copy = billsTipped.filter(filterHundred);
 
 console.log(tips);
 console.log(billsTipped);
-console.log(copy);
+console.log(copy); */
+
+const dejon = {
+    first: 'Dejon',
+    last: 'Kurti',
+    mass: 110,
+    height: 1.95,
+    BMI: function(){
+        return this.mass / (this.height * this.height);
+    }
+}
+
+const rob = {
+    first: 'Rob',
+    last: 'Grande',
+    mass: 78,
+    height: 1.69,
+    BMI: function(){
+        return this.mass / (this.height * this.height);
+    }
+}
+
+if(rob.BMI() > dejon.BMI()){
+    console.log(`${rob.first} has a higher BMI with a BMI of ${rob.BMI()}`);
+} else if(dejon.BMI() > rob.BMI()){
+    console.log(`${dejon.first} has a higher BMI with a BMI of ${dejon.BMI()}`);
+} else{
+    console.log(`${dejon.first} and ${rob.first} have the same BMI, with a BMI of ${rob.BMI()}`);
+}
